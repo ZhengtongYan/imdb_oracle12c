@@ -1,0 +1,43 @@
+;;; 
+Export: Release 12.2.0.1.0 - Production on Wed Feb 13 23:22:07 2019
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production
+Starting "SYSTEM"."SYS_EXPORT_SCHEMA_01":  "system/********@localhost/orclpdb1" schemas=system directory=DATA_PUMP_DIR dumpfile=imdb.dmp 
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Processing object type SCHEMA_EXPORT/STATISTICS/MARKER
+Processing object type SCHEMA_EXPORT/DEFAULT_ROLE
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/COMMENT
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+. . exported "SYSTEM"."CAST_INFO"                        1.235 GB 36125550 rows
+. . exported "SYSTEM"."MOVIE_INFO"                       785.8 MB 14463304 rows
+. . exported "SYSTEM"."NAME"                             307.1 MB 4167490 rows
+. . exported "SYSTEM"."CHAR_NAME"                        212.0 MB 3140339 rows
+. . exported "SYSTEM"."TITLE"                            198.1 MB 2528143 rows
+. . exported "SYSTEM"."PERSON_INFO"                      167.2 MB 2126881 rows
+. . exported "SYSTEM"."MOVIE_COMPANIES"                  88.12 MB 2609129 rows
+. . exported "SYSTEM"."MOVIE_KEYWORD"                    86.11 MB 4523930 rows
+. . exported "SYSTEM"."AKA_NAME"                         68.35 MB  901319 rows
+. . exported "SYSTEM"."AKA_TITLE"                        37.39 MB  361469 rows
+. . exported "SYSTEM"."MOVIE_INFO_IDX"                   32.05 MB 1380035 rows
+. . exported "SYSTEM"."COMPANY_NAME"                     17.55 MB  234997 rows
+. . exported "SYSTEM"."KEYWORD"                          3.973 MB  134170 rows
+. . exported "SYSTEM"."COMPLETE_CAST"                    2.663 MB  135086 rows
+. . exported "SYSTEM"."MOVIE_LINK"                       658.0 KB   29997 rows
+. . exported "SYSTEM"."INFO_TYPE"                        7.820 KB     113 rows
+. . exported "SYSTEM"."LINK_TYPE"                        5.820 KB      18 rows
+. . exported "SYSTEM"."ROLE_TYPE"                        5.703 KB      12 rows
+. . exported "SYSTEM"."COMPANY_TYPE"                     5.593 KB       4 rows
+. . exported "SYSTEM"."KIND_TYPE"                        5.601 KB       7 rows
+. . exported "SYSTEM"."COMP_CAST_TYPE"                   5.562 KB       4 rows
+Master table "SYSTEM"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for SYSTEM.SYS_EXPORT_SCHEMA_01 is:
+  /opt/oracle/admin/ORCLCDB/dpdump/81A6509BA0C242FCE0530100007F12F8/imdb.dmp
+Job "SYSTEM"."SYS_EXPORT_SCHEMA_01" successfully completed at Wed Feb 13 23:24:55 2019 elapsed 0 00:02:47
