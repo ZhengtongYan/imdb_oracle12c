@@ -167,7 +167,7 @@ spool "C:\Users\stefa\Desktop\Work\124.csv"
 exec dbms_output.put_line( (dbms_utility.get_time-:n)/100);
 spool off;
 
---125 (extra long)
+--125 (extra long)--will test 125 and 126 in the future
 alter system flush buffer_cache;
 alter system flush shared_pool;
 --counting time
@@ -203,7 +203,37 @@ spool "C:\Users\stefa\Desktop\Work\126.csv"
 exec dbms_output.put_line( (dbms_utility.get_time-:n)/100);
 spool off;
 
+--127
+alter system flush buffer_cache;
+alter system flush shared_pool;
+--counting time
+set serveroutput on
+variable n number
+exec :n := dbms_utility.get_time;
+SELECT MIN(mi.info) AS movie_budget, MIN(mi_idx.info) AS movie_votes, MIN(kt.kind) AS movie_type, MIN(t.title) AS violent_movie FROM cast_info ci, company_name cn, info_type it1, info_type it2, keyword k, movie_companies mc, movie_info mi, movie_info_idx mi_idx, movie_keyword mk, title t, kind_type kt WHERE ci.note  in ('(writer)', '(head writer)', '(written by)', '(story)', '(story editor)') AND cn.country_code = '[hk]'AND it1.info  = 'genres' AND it2.info  = 'votes' AND k.keyword  in ('murder', 'violence', 'blood', 'gore', 'death', 'female-nudity', 'hospital') AND mc.note  like '%(Blu-ray)%' AND mi.info  in ('Horror', 'Thriller') AND t.production_year  > 2000 AND t.id = mi.movie_id AND t.id = mi_idx.movie_id AND t.id = ci.movie_id AND t.id = mk.movie_id AND t.id = mc.movie_id AND ci.movie_id = mi.movie_id AND ci.movie_id = mi_idx.movie_id AND ci.movie_id = mk.movie_id AND ci.movie_id = mc.movie_id AND mi.movie_id = mi_idx.movie_id AND mi.movie_id = mk.movie_id AND mi.movie_id = mc.movie_id AND mi_idx.movie_id = mk.movie_id AND mi_idx.movie_id = mc.movie_id AND mk.movie_id = mc.movie_id AND it1.id = mi.info_type_id AND it2.id = mi_idx.info_type_id AND k.id = mk.keyword_id AND cn.id = mc.company_id AND t.kind_id =kt.id;
+spool "C:\Users\stefa\Desktop\Work\127.csv"
+exec dbms_output.put_line( (dbms_utility.get_time-:n)/100);
+spool off;
 
-
+--128
+alter system flush buffer_cache;
+alter system flush shared_pool;
+--counting time
+set serveroutput on
+variable n number
+exec :n := dbms_utility.get_time;
+SELECT MIN(mi.info) AS movie_budget, MIN(mi_idx.info) AS movie_votes, MIN(kt.kind) AS movie_type, MIN(t.title) AS violent_liongate_movie 
+FROM cast_info ci, company_name cn, info_type it1, info_type it2, keyword k, movie_companies mc, movie_info mi, movie_info_idx mi_idx, movie_keyword mk, 
+title t, kind_type kt 
+WHERE ci.note  in ('(writer)', '(head writer)', '(written by)', '(story)', '(story editor)') AND 
+cn.name  like 'Lionsgate%' AND it1.info  = 'genres' AND it2.info  = 'votes' AND k.keyword  in ('murder', 'violence', 'blood', 'gore', 'death', 'female-nudity', 'hospital') 
+AND mc.note  like '%(Blu-ray)%' AND mi.info  in ('Horror', 'Thriller') AND t.production_year  > 2008 and (t.title like '%Freddy%' or t.title like '%Jason%' or t.title like 'Saw%') 
+AND t.id = mi.movie_id AND t.id = mi_idx.movie_id AND t.id = ci.movie_id AND t.id = mk.movie_id AND t.id = mc.movie_id AND ci.movie_id = mi.movie_id 
+AND ci.movie_id = mi_idx.movie_id AND ci.movie_id = mk.movie_id AND ci.movie_id = mc.movie_id AND mi.movie_id = mi_idx.movie_id AND mi.movie_id = mk.movie_id 
+AND mi.movie_id = mc.movie_id AND mi_idx.movie_id = mk.movie_id AND mi_idx.movie_id = mc.movie_id AND mk.movie_id = mc.movie_id 
+AND it1.id = mi.info_type_id AND it2.id = mi_idx.info_type_id AND k.id = mk.keyword_id AND cn.id = mc.company_id AND t.kind_id =kt.id;
+spool "C:\Users\stefa\Desktop\Work\128.csv"
+exec dbms_output.put_line( (dbms_utility.get_time-:n)/100);
+spool off;
 
 
